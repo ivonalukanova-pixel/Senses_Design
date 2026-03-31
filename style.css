@@ -1,83 +1,106 @@
+/* Основни настройки */
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Helvetica', sans-serif;
-    scroll-behavior: smooth; /* За плавно движение на бутоните */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
+/* Фон и Общ изглед */
 .hero {
     height: 100vh;
-    background: url('int1 copy.jpg') no-repeat center center/cover;
+    background: url('tvoiata-snimka.jpg') no-repeat center center/cover;
     position: relative;
-    color: white;
 }
 
-overlay {
-    background: rgba(0, 0, 0, 0.3); /* Продължаваме да ползваме лек филтър */
+.overlay {
+    background: rgba(0, 0, 0, 0.25); /* Филтър за по-добър контраст */
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Тази промяна "залепва" всичко към горната част */
-    justify-content: flex-start;
-    /* Добавяме малко padding най-горе, за да не се опира в тавана */
-    padding-top: 30px; 
+    justify-content: flex-start; /* Подрежда всичко отгоре */
+    padding-top: 20px;
 }
 
-.logo-container { text-align: center; }
+/* Лого - Голямо и изчистено */
 .logo-image {
-    /* Промени това число, за да стане логото по-голямо (напр. от 220px на 350px) */
-    max-width: 350px; 
+    max-width: 380px; /* Размерът, който искаше */
     height: auto;
     display: block;
     margin: 0 auto;
-    
-    /* Твоето магическо изрязване, което скрива фона */
-    clip-path: ellipse(50% 50% at 50% 50%);
-    
-    /* Добавяме малко разстояние под него, за да не "диша" в заглавието */
-    margin-bottom: 20px;
-}.main-title { text-align: center; }
-h2 { font-weight: 300; font-size: 2.5rem; letter-spacing: 3px; line-height: 1.4; }
+    /* Изрязваме квадратчетата, ако ги има в ъглите */
+    clip-path: ellipse(48% 40% at 50% 50%); 
+    margin-bottom: -15px; /* Прибира текста по-близо до логото */
+}
 
+/* Централен текст */
 .main-content {
     text-align: center;
     color: white;
-    /* Това добавя разстояние под логото, за да не се застъпват */
-    margin-top: 30px; 
+    margin-top: 0px;
 }
 
-/* Бутонът в центъра */
+h2 {
+    font-weight: 300;
+    font-size: 2.6rem;
+    letter-spacing: 4px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+/* Основен бутон */
 .btn-main {
     display: inline-block;
-    margin-top: 20px;
-    padding: 12px 35px;
+    padding: 12px 45px;
     border: 1px solid white;
     color: white;
     text-decoration: none;
-    border-radius: 25px;
-    transition: 0.3s;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
 }
-.btn-main:hover { background: white; color: black; }
 
-/* Долната навигация */
+.btn-main:hover {
+    background: white;
+    color: black;
+}
+
+/* Долна навигация */
 .bottom-nav {
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 50px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    padding: 20px 0;
-    
-    /* Ето магията: това избутва навигацията към самото дъно */
-    margin-top: auto; 
+    -webkit-backdrop-filter: blur(10px); /* За Safari */
+    padding: 25px 0;
+    margin-top: auto; /* Избутва лентата най-долу */
 }
+
 .bottom-nav a {
     color: white;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     letter-spacing: 2px;
-    opacity: 0.8;
+    font-weight: 400;
+    transition: opacity 0.3s;
 }
-.bottom-nav a:hover { opacity: 1; }
+
+.bottom-nav a:hover {
+    opacity: 0.6;
+}
+
+/* Секции за съдържание */
+.content-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-top: 1px solid #eee;
+}
