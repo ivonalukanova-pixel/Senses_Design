@@ -12,25 +12,40 @@ body, html {
     color: white;
 }
 
-.overlay {
-    background: rgba(0, 0, 0, 0.2); /* Лек филтър върху снимката */
+overlay {
+    background: rgba(0, 0, 0, 0.3); /* Продължаваме да ползваме лек филтър */
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    padding: 40px 0;
+    /* Тази промяна "залепва" всичко към горната част */
+    justify-content: flex-start;
+    /* Добавяме малко padding най-горе, за да не се опира в тавана */
+    padding-top: 30px; 
 }
 
 .logo-container { text-align: center; }
 .logo-image {
-    max-width: 150px; /* Можеш да промениш това число, за да увеличиш или намалиш логото */
+    /* Промени това число, за да стане логото по-голямо (напр. от 220px на 350px) */
+    max-width: 350px; 
+    height: auto;
     display: block;
     margin: 0 auto;
-    padding-bottom: 20px;
-}
-.main-title { text-align: center; }
+    
+    /* Твоето магическо изрязване, което скрива фона */
+    clip-path: ellipse(50% 50% at 50% 50%);
+    
+    /* Добавяме малко разстояние под него, за да не "диша" в заглавието */
+    margin-bottom: 20px;
+}.main-title { text-align: center; }
 h2 { font-weight: 300; font-size: 2.5rem; letter-spacing: 3px; line-height: 1.4; }
+
+.main-content {
+    text-align: center;
+    color: white;
+    /* Това добавя разстояние под логото, за да не се застъпват */
+    margin-top: 30px; 
+}
 
 /* Бутонът в центъра */
 .btn-main {
@@ -50,10 +65,13 @@ h2 { font-weight: 300; font-size: 2.5rem; letter-spacing: 3px; line-height: 1.4;
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 40px;
     background: rgba(255, 255, 255, 0.1);
-    padding: 15px 0;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    padding: 20px 0;
+    
+    /* Ето магията: това избутва навигацията към самото дъно */
+    margin-top: auto; 
 }
 .bottom-nav a {
     color: white;
