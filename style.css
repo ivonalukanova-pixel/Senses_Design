@@ -99,3 +99,43 @@ body, html {
 }
 .bottom-nav a:hover { opacity: 1; }
 
+/* --- СТИЛОВЕ ЗА МОБИЛНИ УСТРОЙСТВА --- */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Намаляваме разстоянието отгоре, за да не бяга всичко надолу */
+    .overlay {
+        padding-top: 30px;
+    }
+
+    /* 2. Намаляваме логото, за да не заема целия екран */
+    .logo-image {
+        max-width: 150px !important;
+    }
+
+    /* 3. Оправяме заглавието - по-малък шрифт, за да се събере на 2 реда */
+    h2 {
+        font-size: 1.4rem !important;
+        letter-spacing: 2px !important;
+        line-height: 1.2 !important;
+        margin-top: 10px !important;
+    }
+
+    /* 4. Бутонът да е по-удобен за натискане */
+    .btn-main {
+        padding: 10px 25px !important;
+        font-size: 0.7rem !important;
+    }
+
+    /* 5. НАВИГАЦИЯТА: Най-важната част! */
+    /* Подреждаме бутоните един под друг, за да не излизат от екрана */
+    .bottom-nav {
+        flex-direction: column !important; 
+        gap: 10px !important;
+        padding: 15px 0 !important;
+    }
+
+    .bottom-nav a {
+        font-size: 0.7rem !important;
+        padding: 5px;
+    }
+}
