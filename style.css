@@ -99,43 +99,58 @@ body, html {
 }
 .bottom-nav a:hover { opacity: 1; }
 
-/* --- СТИЛОВЕ ЗА МОБИЛНИ УСТРОЙСТВА --- */
-@media screen and (max-width: 768px) {
+/* --- ПЪЛНО ОСЪРАЗМЕРЯВАНЕ ЗА МОБИЛНИ УСТРОЙСТВА --- */
+@media screen and (max-width: 480px) {
     
-    /* 1. Намаляваме разстоянието отгоре, за да не бяга всичко надолу */
+    /* 1. Нагласяме главния контейнер */
     .overlay {
-        padding-top: 30px;
+        padding-top: 20px !important;
+        justify-content: flex-start !important;
+        height: 100vh !important;
+        display: flex !important;
+        flex-direction: column !important;
     }
 
-    /* 2. Намаляваме логото, за да не заема целия екран */
+    /* 2. Логото - правим го по-малко, за да има място за текста */
     .logo-image {
-        max-width: 150px !important;
+        max-width: 140px !important;
+        height: auto !important;
+        margin-bottom: 10px !important;
     }
 
-    /* 3. Оправяме заглавието - по-малък шрифт, за да се събере на 2 реда */
+    /* 3. Заглавието - Свиваме го, за да не излиза от екрана */
     h2 {
         font-size: 1.4rem !important;
-        letter-spacing: 2px !important;
         line-height: 1.2 !important;
+        letter-spacing: 2px !important;
+        margin: 10px 20px !important; /* Добавяме място отстрани */
+        white-space: normal !important; /* Позволява на текста да мине на нов ред */
+    }
+
+    /* 4. Бутонът - по-малък и удобен */
+    .btn-main {
+        padding: 10px 25px !important;
+        font-size: 0.75rem !important;
         margin-top: 10px !important;
     }
 
-    /* 4. Бутонът да е по-удобен за натискане */
-    .btn-main {
-        padding: 10px 25px !important;
-        font-size: 0.7rem !important;
-    }
-
-    /* 5. НАВИГАЦИЯТА: Най-важната част! */
-    /* Подреждаме бутоните един под друг, за да не излизат от екрана */
+    /* 5. МЕНЮТО - Най-важната част за осъразмеряване */
     .bottom-nav {
-        flex-direction: column !important; 
-        gap: 10px !important;
+        position: absolute !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: row !important; /* Бутоните един до друг */
+        flex-wrap: wrap !important; /* Ако не се събират, минават на нов ред */
+        justify-content: center !important;
+        gap: 15px !important;
         padding: 15px 0 !important;
+        background: rgba(0, 0, 0, 0.8) !important; /* По-тъмно, за да се чете */
     }
 
     .bottom-nav a {
-        font-size: 0.7rem !important;
-        padding: 5px;
+        font-size: 0.65rem !important;
+        letter-spacing: 1px !important;
     }
 }
