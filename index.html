@@ -3,34 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senses Design | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Senses Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body, html {
+            height: 100%;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero {
+            position: relative; /* Важно за подреждането */
+            height: 100vh;
+            width: 100%;
+            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), 
+                        url('int.jpg') no-repeat center center/cover;
+            text-align: center;
+        }
+
+        /* 1. ЛОГО - КАЧВАМЕ ГО НАЙ-ГОРЕ */
+        .logo-container {
+            position: absolute;
+            top: 10px; /* Разстояние от самия таван */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .main-logo {
+            max-width: 140px; 
+            height: auto;
+        }
+
+        /* 2. ТЕКСТ - НАМЕСТВАМЕ ГО НАД МАСАТА */
+        .main-content {
+            position: absolute;
+            top: 50%; /* Промени на 35% или 45% ако искаш да мръдне малко */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 200;
+            letter-spacing: 5px;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3); /* За по-добра четимост */
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            border: 1.5px solid white;
+            padding: 10px 40px;
+            border-radius: 50px;
+            font-size: 13px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(5px);
+            transition: 0.3s;
+ 
+        }
+.btn:hover { background: white; color: black; }
+
+
+
+        /* 3. МЕНЮ - НАЙ-ДОЛУ */
+        .footer-nav {
+            position: absolute;
+            bottom: 30px; /* Разстояние от самия под */
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 40px;
+            width: 100%;
+            justify-content: center;
+        }
+        .footer-nav a {
+            text-decoration: none;
+            color: rgba(255,255,255,0.7);
+            font-size: 11px;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+        .footer-nav a:hover { color: white; }
+
+    </style>
 </head>
 <body>
 
-    <section id="home" class="hero">
-        <div class="overlay">
-            <div class="logo-container">
-               <div class="logo-container">
-    <img src="logo.png" alt="Senses Design Logo" class="logo-image">
-</div>
-            
-            <div class="main-title">
-                <h2>ИНТЕРИОР, КОЙТО<br>СЕ ЧУВСТВА</h2>
-                <a href="#projects" class="btn-main">ОТКРИЙ ПОВЕЧЕ</a>
-            </div>
-
-            <nav class="bottom-nav">
-                <a href="#about">ABOUT US</a>
-                <a href="#projects">CONCEPTUAL WORKS</a>
-                <a href="#contact">CONTACT US</a>
-            </nav>
+    <section class="hero">
+        <div class="logo-container">
+            <img src="logo.png" alt="Senses Design" class="main-logo">
         </div>
-    </section>
 
-    <section id="projects" style="height: 100vh; background: #f4f4f4; padding: 50px; text-align: center;">
-        <h2>CONCEPTUAL WORKS</h2>
-        <p>Тук ще подредиш твоите снимки.</p>
+        <div class="main-content">
+            <h1>ИНТЕРИОР, КОЙТО<br>СЕ ЧУВСТВА</h1>
+            <a href="#" class="btn">ОТКРИЙ ПОВЕЧЕ</a>
+        </div>
+
+        <nav class="footer-nav">
+            <a href="#">ABOUT US</a>
+            <a href="#">CONCEPTUAL WORKS</a>
+            <a href="#">CONTACT US</a>
+        </nav>
     </section>
 
 </body>
