@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Senses Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body, html {
+            height: 100%;
+            width: 100%;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('int.jpg') no-repeat center center;
+            background-size: cover;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            padding: 60px 40px;
+            border-radius: 2px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 200;
+            letter-spacing: 10px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .contact-item {
+            margin-bottom: 25px;
+        }
+
+        .contact-item h2 {
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 8px;
+            font-weight: 400;
+        }
+
+        .contact-item p, .contact-item a {
+            font-size: 1.2rem;
+            font-weight: 200;
+            color: white;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .back-btn {
+            margin-top: 40px;
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            border: 1px solid white;
+            padding: 10px 30px;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: white;
+            color: black;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.6rem; letter-spacing: 5px; }
+            .content-box { padding: 40px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="content-box">
+            <h1>CONTACT US</h1>
+
+            <div class="contact-item">
+                <h2>Email</h2>
+                <p><a href="mailto:office@sensesdesign.com">office@sensesdesign.com</a></p>
+            </div>
+
+            <div class="contact-item">
+                <h2>Phone</h2>
+                <p><a href="tel:+359888123456">+359 888 123 456</a></p>
+            </div>
+
+            <div class="contact-item">
+                <h2>Location</h2>
+                <p>Sofia, Bulgaria</p>
+            </div>
+
+            <div class="contact-item">
+                <h2>Social</h2>
+                <p><a href="#">Instagram</a> / <a href="#">Facebook</a></p>
+            </div>
+
+            <a href="index.html" class="back-btn">← Back</a>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senses Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
+    <style>
+        /* Махаме всички излишни разстояния */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* Правим страницата да заема целия екран */
+        html, body {
+            height: 100%;
+            width: 100%;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #000;
+            color: white;
+            overflow: hidden;
+        }
+
+ .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Бута логото нагоре, менюто надолу */
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    padding: 20px 0; /* Общо разстояние от краищата на екрана */
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),  
+                url('int.jpg') no-repeat center center/cover;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Логото - малко по-нагоре */
+.logo-wrap {
+    margin-top: 10px;
+height: 100px;
+}
+
+/* СРЕДАТА - Тази част заема цялото място и центрира текста точно над масата */
+.main-content {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+margin-top: -100px;
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: 10px;
+    font-weight: 200;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+/* Стил за бутона */
+.back-btn {
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 15px 45px;
+    border-radius: 50px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.back-btn:hover {
+    background: white;
+    color: black;
+}
+
+/* Менюто най-долу */
+.footer-nav {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+    letter-spacing: 2.6px;
+    transition: 0.3s;
+}
+
+.footer-nav a:hover {
+    color: white;
+}
+
+        /* За мобилни телефони */
+        @media (max-width: 600px) {
+            .footer-nav { flex-direction: column; gap: 10px; }
+            .main-content { margin-bottom: 0; }
+        }
+    </style>
+</head>
+<body>
+
+ <section class="hero">
+    
+    <div class="logo-wrap">
+        <img src="logo.png" style="width: 140px;" alt="Senses Design">
+    </div>
+
+    <div class="main-content">
+        <h1>ИНТЕРИОР, КОЙТО<br>СЕ ЧУВСТВА</h1>
+        <a href="conceptual.html" class="back-btn">ОТКРИЙ ПОВЕЧЕ</a>
+    </div>
+
+    <nav class="footer-nav">
+        <a href="about.html">ABOUT US</a>
+        <a href="conceptual.html">CONCEPTUAL WORKS</a>
+        <a href="contact.html">CONTACT US</a>
+    </nav>
+
+</section>
+
+</body>
+</html>

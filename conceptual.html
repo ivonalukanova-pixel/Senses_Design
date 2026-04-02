@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceptual Works - Senses Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body, html {
+            height: 100%;
+            width: 100%;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            background-color: #1a1a1a; /* Тъмен фон за по-добра видимост на галерията */
+        }
+
+        .container {
+            min-height: 100vh;
+            width: 100%;
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('int.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 200;
+            letter-spacing: 12px;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+
+        /* ГАЛЕРИЯТА (Мрежата със снимки) */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* ИНДИВИДУАЛНА СНИМКА */
+        .work-item {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            aspect-ratio: 4 / 5; /* Прави всички снимки с еднаква пропорция */
+            transition: 0.4s ease;
+        }
+
+        .work-item:hover {
+            border-color: white;
+            transform: translateY(-5px);
+        }
+
+        .work-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Снимката запълва мястото без да се разпъва грозно */
+            opacity: 0.8;
+            transition: 0.4s;
+        }
+
+        .work-item:hover img {
+            opacity: 1;
+        }
+
+        .back-btn {
+            margin-top: 50px;
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            border: 1px solid white;
+            padding: 12px 40px;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover { background: white; color: black; }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.5rem; letter-spacing: 5px; }
+            .gallery-grid { grid-template-columns: 1fr; } /* На телефон са една под друга */
+        }
+    </style>
+</head>
+<body>
+
+    <section class="container">
+        <h1>CONCEPTUAL WORKS</h1>
+
+        <div class="gallery-grid">
+            <div class="work-item">
+                <img src="work1.jpg" alt="Project 1">
+            </div>
+
+            <div class="work-item">
+                <img src="work2.jpg" alt="Project 2">
+            </div>
+
+            <div class="work-item">
+                <img src="work3.jpg" alt="Project 3">
+            </div>
+
+            <div class="work-item">
+                <img src="work4.jpg" alt="Project 4">
+            </div>
+            
+            </div>
+
+        <a href="index.html" class="back-btn">← Back to Menu</a>
+    </section>
+
+</body>
+</html>
